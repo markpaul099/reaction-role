@@ -20,8 +20,8 @@ ${client.channels.cache.size} channels and ${client.users.cache.size} users cach
 		// Set Bot's Pressence/Activity
 		setInterval(() => {
 			const list = [
-				{ type: ActivityType.Watching, name: "for /help" },
-				{ type: ActivityType.Watching, name: `For reactions` },
+				{ type: ActivityType.Watching, name: "${client.guilds.cache.reduce((acc, guild) => acc + guild.memberCount, 0)} Members" },
+				{ type: ActivityType.Watching, name: `For Reactions` },
 			];
 			const index = Math.floor(Math.random() * list.length);
 			client.user.setPresence({ activities: [{ name: list[index].name, type: list[index].type }], status: "online" });
