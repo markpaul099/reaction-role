@@ -20,7 +20,6 @@ ${client.channels.cache.size} channels and ${client.users.cache.size} users cach
 		// Set Bot's Pressence/Activity
 		setInterval(() => {
 			const list = [
-				{ type: ActivityType.Watching, name: `${client.guilds.cache.filter(member => !member.user.bot).size} Members` },
 				{ type: ActivityType.Watching, name: "For Reactions" },
 			];
 			const index = Math.floor(Math.random() * list.length);
